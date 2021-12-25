@@ -1,0 +1,327 @@
+            @import '../../variables';
+            * {
+                padding: auto;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            .text {
+                color: $text-color;
+                font-size: 14px
+            }
+            
+            .bold {
+                font-weight: bold;
+            }
+            
+            .float-right {
+                float: right;
+                margin: 0 1rem;
+            }
+            
+            .link {
+                color: #076DB6;
+                font-size: 15px;
+            }
+            
+            .red {
+                color: red;
+            }
+            
+            .green {
+                color: green;
+            }
+            
+            .home-page {
+                padding: 1.5rem 0;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: $border-bottom;
+                .home-page__main .row {
+                    justify-content: start;
+                }
+                .news {
+                    padding: 0 0.8rem;
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                        margin: 1rem 0.5rem;
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                    &__icon {
+                        color: $text-color;
+                        margin: 1rem 0.5rem
+                    }
+                    &__title {
+                        color: $text-color;
+                        font-size: 1.3rem;
+                        line-height: 1.5em;
+                        margin-bottom: 1rem;
+                        &-bottom {
+                            color: $text-color;
+                            font-size: 1.1rem;
+                            margin: 0 0 0.8rem 0;
+                        }
+                    }
+                    &__description {
+                        color: #444;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        text-align: left;
+                        font-size: 13px;
+                    }
+                    &__bottom {
+                        margin-top: .8rem;
+                        // padding: 0 1rem
+                        div {
+                            // padding-left: 29px;
+                        }
+                        div:last-child {
+                            margin-left: -10px;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+                .link-page {
+                    color: $hover-color;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+                .border-right {
+                    border-right: 1px solid #eee;
+                    padding: 0
+                }
+                .goc-nhin__author {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                    p {
+                        margin: 5px 0;
+                        font-style: italic;
+                        color: $text-color;
+                    }
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: .3px solid #eee
+                    }
+                }
+            }
+            
+            .top-story {
+                margin: 2rem 0;
+                &__right {
+                    &__medium-table {
+                        position: relative;
+                        &::before {
+                            // left: 340px;
+                            content: "";
+                            width: 8px;
+                            height: 8px;
+                            background: #fff;
+                            border: 1px solid;
+                            border-color: transparent transparent #ddd #ddd;
+                            position: absolute;
+                            transform: rotate( 45deg);
+                            z-index: 1;
+                            left: 335px;
+                        }
+                        &::after {
+                            left: 50%;
+                            top: 0;
+                            background-color: #ddd;
+                            content: "";
+                            width: 1px;
+                            height: 100%;
+                            position: absolute;
+                        }
+                    }
+                }
+                &__common {
+                    display: flex;
+                    margin: 1rem 0;
+                    padding: 1rem 0;
+                    border: $border-bottom;
+                    justify-content: center;
+                    .btn-nav {
+                        margin: 0 10px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    a {
+                        color: #076DB6;
+                        font-size: 13px;
+                    }
+                    .hoi-bac-si {
+                        display: flex;
+                        justify-items: center;
+                        align-items: center;
+                        button {
+                            background-color: transparent;
+                            padding: 0.4rem;
+                            border: 0.5px solid #076DB6;
+                            border-radius: 3px;
+                            color: #076DB6;
+                            margin: 0 1rem;
+                        }
+                    }
+                }
+            }
+            
+            .aff-cup {
+                border: $border-bottom;
+                padding: .5rem;
+                &__info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    align-content: space-between;
+                    &__time {
+                        font-weight: bold;
+                        color: $text-color;
+                    }
+                    &__topic {
+                        color: $text-color;
+                        font-size: 1rem;
+                        margin: 0 16px;
+                    }
+                    &__time {
+                        padding: 0.5rem 1rem;
+                        position: relative;
+                        border-right: $border-bottom;
+                        &::before {
+                            position: absolute;
+                            // co
+                        }
+                    }
+                    img {
+                        width: 35px;
+                        // height: 18px;
+                    }
+                }
+            }
+            
+            // Right 
+            .top-story__right {
+                &__medium {
+                    border: $border-bottom;
+                    padding: 1rem;
+                    padding-bottom: 1.5rem;
+                    &__nav {
+                        width: 100%;
+                        display: block;
+                        overflow-x: scroll;
+                        // overflow: hidden;
+                        border-bottom: $border-bottom;
+                        display: -webkit-inline-box;
+                        &::-webkit-scrollbar {
+                            display: block;
+                        }
+                        button:first-child {
+                            border: none;
+                            padding: 0.5rem;
+                            background: transparent;
+                            font-weight: 600;
+                            cursor: pointer;
+                            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        }
+                        button {
+                            display: block;
+                            // font-size: 15px;
+                            margin: 0.2rem 0.5rem;
+                            padding: 0.5rem;
+                            background: transparent;
+                            border: $border-bottom;
+                            cursor: pointer;
+                            border: 0.5px solid #ACCEE6;
+                            border-radius: 5px
+                        }
+                        button:last-child {
+                            color: #fff;
+                            border: none;
+                            padding: 0.5rem;
+                            background: #076DB6;
+                        }
+                    }
+                }
+                &__medium-title {
+                    color: $text-color;
+                    margin: 1rem 0
+                }
+                &__medium-table {
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 15px;
+                    align-items: center;
+                }
+            }
+            
+            .medium__table {
+                // width: 100%;
+                // border: 1px solid black;
+                // margin:
+                margin-top: -26px;
+                &__title {
+                    margin: 0.7rem auto;
+                    display: flex;
+                    align-items: center;
+                }
+                .row .col {
+                    font-size: 13px;
+                    color: $text-color;
+                    text-align: center;
+                    max-width: initial;
+                    // margin: 1rem 0;
+                }
+                &__content {
+                    div>p {
+                        margin: 0.5rem 0;
+                    }
+                }
+            }
+            
+            .table-scroll {
+                &__title {
+                    color: $text-color;
+                    margin: 1rem 0;
+                    font-size: 13px
+                }
+                &__content {
+                    height: 100px;
+                    overflow-y: scroll;
+                    color: $text-color;
+                    // &::-webkit-scrollbar {
+                    //     display: block;
+                    // }
+                    div {
+                        padding-left: 22px;
+                    }
+                    div>p {
+                        margin: 0.5rem 0;
+                    }
+                }
+                &__province {}
+            }
+            
+            // .medium__table {}
+            // .medium__table>tr>td {
+            //     max-width: 5rem!important;
+            //     padding: 5px 12px;
+            // }
+            // .table-scroll {
+            //     display: flex;
+            //     justify-content: space-between;
+            //     align-items: center;
+            //     flex-direction: column;
+            //     justify-content: center;
+            //     &__title {
+            //         display: flex;
+            //     }
+            //     &__content {
+            //         display: flex;
+            //     }
+            // }

@@ -1,0 +1,16 @@
+@import "../../variables";
+.story-item {
+    border-bottom: $border-bottom;
+    &__title {
+        margin: 1rem 0
+    }
+    img {
+        margin: 1rem 0
+    }
+    &__content {
+        display: flex;
+        &__des {
+            margin: 1rem 0.5rem
+        }
+    }
+}

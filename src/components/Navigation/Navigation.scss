@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+$text-color:#4F4F4F;
+$light-gray-color:#bdbdbd;
+$hover-color:#b52759;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    border-bottom: 0.5px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #fff
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.parent {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    z-index: 1;
+    // padding: 10px 0;
+}
+
+.home {
+    background-color: #ddd;
+    padding: 4px 5px;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 14px;
+    line-height: 50px;
+    &__all {
+        display: flex;
+        align-items: center;
+        &>span {
+            margin-right: 5px;
+            color: $light-gray-color;
+        }
+    }
+    &__dropbtn {
+        // line-height: 32px;
+        font-size: 14px;
+        color: $text-color;
+        font-size: 16px;
+        border: none;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition-duration: 200ms;
+        transition-property: color;
+        transition-timing-function: cubic-bezier(.7, 1, .7, 1);
+        &:hover {
+            color: $hover-color;
+        }
+        &__content {
+            visibility: hidden;
+            // display: none;
+            top: 80px;
+            opacity: 0;
+            padding: 10px;
+            list-style-type: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: max-content;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            transition: all 0.2s;
+            // animation: mymove 0.7s 0.7s;
+            &>li>a {
+                color: black;
+                text-decoration: none;
+                display: block;
+                line-height: 40px;
+                &:hover {
+                    text-decoration: underline;
+                    color: $hover-color
+                }
+            }
+        }
+    }
+}
+
+.dropdown:hover .dropdown__dropbtn__content {
+    visibility: visible;
+    opacity: 1;
+    top: 49px;
+    background-color: #fff;
+    transition: all 0.3s;
+    border-top: 1px solid #9f224e;
+    color: $hover-color;
+}

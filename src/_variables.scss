@@ -1,0 +1,15 @@
+$text-color:#4F4F4F;
+$light-gray-color:#bdbdbd;
+$hover-color:#b52759;
+$border-bottom: .5px solid #ddd;
+@mixin buttonHeaderStyle {
+    min-width: fit-content;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: none;
+    color: #4f4f4f;
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+}
